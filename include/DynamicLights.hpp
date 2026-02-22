@@ -1,10 +1,10 @@
 #pragma once
 
+#include <endstone/endstone.hpp>
 #include <endstone/plugin/plugin.h>
 
-class PluginTemplate : public endstone::Plugin {
+class DynamicLights : public endstone::Plugin {
 public:
     void onEnable() override;
-
     void onDisable() override;
 };

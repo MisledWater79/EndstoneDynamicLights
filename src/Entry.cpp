@@ -1,7 +1,7 @@
-#include "PluginTemplate.hpp"
+#include "DynamicLights.hpp"
 
-ENDSTONE_PLUGIN("endstone_template", "1.0.0", PluginTemplate) {
+ENDSTONE_PLUGIN("endstone_dynamic_lights", "1.0.0", DynamicLights) {
     authors = {"MisledWater79"};
-    description = "Template Plugin for Endstone";
-    prefix = "endTemp";
+    description = "Endstone plugin to add dynamic lights to the game.";
+    prefix = "mw";
 }
