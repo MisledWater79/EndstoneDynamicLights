@@ -44,7 +44,7 @@ jobs:
       - name: Install Clang
         run: |
           apt-get update
-          apt-get install -y cmake clang libc++-dev libc++abi-dev git libfmt-dev
+          apt-get install -y cmake clang libc++-dev libc++abi-dev git
 
       - name: Configure CMake
         run: cmake -B build -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang
