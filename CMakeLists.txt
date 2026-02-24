@@ -13,7 +13,7 @@ set(SOURCES
 if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
     add_compile_definitions(_ITERATOR_DEBUG_LEVEL=0)
 elseif (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++ -fPIC -fexperimental-library")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++ -fPIC -lfmt")
     link_libraries(-static-libgcc -static-libstdc++ libc++.a libc++abi.a)
 endif ()
 
