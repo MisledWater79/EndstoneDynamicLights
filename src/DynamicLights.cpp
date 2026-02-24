@@ -1,6 +1,7 @@
 #include "DynamicLights.hpp"
 #include "BinStream.hpp"
 
+#include <format>
 #include <fstream>
 #include <filesystem>
 
