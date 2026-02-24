@@ -1,7 +1,7 @@
 #include "DynamicLights.hpp"
 #include "BinStream.hpp"
 
-#include <fmt/core.h>
+#include <format>
 #include <fstream>
 #include <filesystem>
 
@@ -119,7 +119,7 @@ int DynamicLights::getLightValue(std::string typeID) {
 
 void DynamicLights::sendLightOrAir(Player* player, Location location, int light_level) {
     std::string typeID = "minecraft:air";
-    if (light_level > 0 && light_level <= 15) typeID =  fmt::format("minecraft:light_block_{}", light_level);
+    if (light_level > 0 && light_level <= 15) typeID =  std::format("minecraft:light_block_{}", light_level);
 
     std::unique_ptr<BlockData> data = getServer().createBlockData(typeID);
 
