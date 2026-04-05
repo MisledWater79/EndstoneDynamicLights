@@ -10,16 +10,24 @@ public:
     void onDisable() override;
 
     void loadConfig();
+    bool isValidConfig();
 
     void onJoin(endstone::PlayerJoinEvent &event);
     void onQuit(endstone::PlayerQuitEvent &event);
     void onMove(endstone::PlayerMoveEvent &event);
     void onItemHeld(endstone::PlayerItemHeldEvent &event);
 
+    void checkHands();
+
+    bool hasLightInHand(endstone::Player* player);
+    void updateData(endstone::Player* player);
+    void updateLights(endstone::Player* player);
     int getLightValue(std::string typeID);
+    bool isOffhandable(std::string typeID);
     void sendLightOrAir(endstone::Player* player, endstone::Location location, int light_level);
 
 private:
+    std::map<std::string, int> itemLightMap;
     std::map<endstone::UUID, std::vector<endstone::Location>> light_map = {};
     std::map<endstone::UUID, std::string> mainhand_map = {};
     std::map<endstone::UUID, std::string> offhand_map = {};
